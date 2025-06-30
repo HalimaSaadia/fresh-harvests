@@ -1,11 +1,14 @@
-// @ts-nocheck
 "use client";
 
 import { customLoader } from "@/utils/customLoader";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { Product } from "./Products";
+interface ProductCardProps {
+  data: Product;
+}
 
-const ProductCard = ({ data }) => {
+const ProductCard = ({ data }:ProductCardProps) => {
   const { name, image, price } = data;
   return (
     <div className="rounded shadow p-3 ">

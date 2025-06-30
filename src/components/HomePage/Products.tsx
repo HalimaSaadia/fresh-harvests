@@ -122,7 +122,7 @@ const Products = () => {
       image:
         "https://bd-live-21.slatic.net/kf/Sbf3cf5a6b5ae45eea4da676472339ae6K.jpg",
     },
-    
+
     {
       name: "Eggplant",
       price: 2.3,
@@ -141,7 +141,7 @@ const Products = () => {
       image:
         "https://bd-live-21.slatic.net/kf/Sbf3cf5a6b5ae45eea4da676472339ae6K.jpg",
     },
-    
+
     {
       name: "Eggplant",
       price: 2.3,
@@ -154,7 +154,7 @@ const Products = () => {
       image:
         "https://bd-live-21.slatic.net/kf/Sbf3cf5a6b5ae45eea4da676472339ae6K.jpg",
     },
-    
+
     {
       name: "Eggplant",
       price: 2.3,
@@ -162,7 +162,7 @@ const Products = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTitYipbBtEAkVKfz_jdXp3saKbLosEkWl9Tg&s",
     },
   ];
- 
+
   return (
     <MaxWidthWrapper className="py-16">
       <SectionHeading
