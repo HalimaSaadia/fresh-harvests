@@ -16,7 +16,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className={`w-full bg-white py-7`}>
+    <nav className={`w-full bg-transparent py-7 relative z-50 `}>
       <MaxWidthWrapper className="flex items-center justify-between">
         <div className="flex justify-center gap-2">
           <Image
@@ -34,7 +34,7 @@ const Navbar = () => {
           <NavItems />
         </div>
 
-        <div className="hidden lg:block  ">
+        <div className="hidden lg:block  text-white ">
           <div className="flex gap-4">
             <div className="flex gap-1 items-center">
               <Heart size={16} />
@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
 
             <div>
-              <Button variant="outline">Sing in</Button>
+              <Button variant="outline" className="bg-transparent">Sing in</Button>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <SheetDescription></SheetDescription>
               </SheetHeader>
               <NavItems />
-              <div className=" mx-auto">
+              <div className=" mx-auto ">
                 <div className="flex flex-col gap-4">
                   <div className="flex gap-1 items-center">
                     <Heart size={16} />
