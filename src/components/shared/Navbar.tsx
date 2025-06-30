@@ -35,7 +35,7 @@ const Navbar = () => {
           <NavItems />
         </div>
 
-        <div className="hidden lg:block   ">
+        <div className="hidden lg:block   text-white">
           <div className="flex gap-4">
             <div className="flex gap-1 items-center">
               <Heart size={16} />
@@ -74,7 +74,7 @@ const Navbar = () => {
                   </div>
 
                   <div>
-                    <Button variant="outline">Sing in</Button>
+                   <SingInForm />
                   </div>
                 </div>
               </div>

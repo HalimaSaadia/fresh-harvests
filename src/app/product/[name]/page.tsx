@@ -151,7 +151,7 @@ const page = () => {
          <div className="bg-[#F4F6F6] max-w-4xl rounded-xl p-8">
               <p className="text-[#4A4A52] sm:text-sm md:text-lg font-semibold">
                 {" "}
-                I absolutely love Fresh Harvest! The quality of their produce is outstanding. It's always fresh, flavorful, and delicious. The convenience of ordering online and having it delivered to my doorstep saves me so much time. Fresh Harvest has become my go-to for all my fruit and vegetable needs.
+                I absolutely love Fresh Harvest! The quality of their produce is outstanding. It&apos; always fresh, flavorful, and delicious. The convenience of ordering online and having it delivered to my doorstep saves me so much time. Fresh Harvest has become my go-to for all my fruit and vegetable needs.
               </p>
             
             </div>
