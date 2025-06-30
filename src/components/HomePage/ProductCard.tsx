@@ -16,7 +16,7 @@ const ProductCard = ({ data }) => {
           width={200}
           height={200}
           alt={name}
-          className="mx-auto"
+          className="mx-auto h-[120px] w-[150px] md:h-[200px] md:w-[200px] object-cover"
         />
       </div>
       <div>
