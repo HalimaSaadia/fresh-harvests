@@ -166,6 +166,7 @@ const Products = () => {
   return (
     <MaxWidthWrapper className="py-16">
       <SectionHeading
+      className="max-w-md mx-auto"
         title="Our Fresh Products"
         subTitle="Our  Products"
         description=" We pride ourselves on offering a wide variety of fresh and flavorful fruits, vegetables, and salad ingredients."
