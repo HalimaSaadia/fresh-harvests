@@ -4,6 +4,7 @@ import { customLoader } from "@/utils/customLoader";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Product } from "./Products";
+import Link from "next/link";
 interface ProductCardProps {
   data: Product;
 }
@@ -31,7 +32,7 @@ const ProductCard = ({ data }:ProductCardProps) => {
           variant={"outline"}
           className="text-[#212337] font-normal w-full hover:bg-[#FF6A1A]  hover:text-white hover:cursor-pointer"
         >
-          Add To Cart
+          <Link href={`/product/${name}`}>Add To Cart</Link>
         </Button>
       </div>
     </div>

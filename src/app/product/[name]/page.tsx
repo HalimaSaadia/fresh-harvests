@@ -1,6 +1,9 @@
 "use client";
+import ProductCard from "@/components/HomePage/ProductCard";
+import { fruits } from "@/components/HomePage/Products";
 import QuantityCounter from "@/components/Product/QuantityCounter";
 import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
+import SectionHeading from "@/components/shared/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tabs, TabsContent } from "@radix-ui/react-tabs";
@@ -154,6 +157,16 @@ const page = () => {
             </div>
         </TabsContent>
       </Tabs>
+
+      {/* Related Product Section */}
+     <div className="py-20">
+      <SectionHeading subTitle="Our Products" title="Related Products" description="" />
+       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+         {fruits.slice(0, 4).map((item, idx) => (
+              <ProductCard key={idx} data={item} />
+            ))}
+      </div>
+     </div>
     </MaxWidthWrapper>
   );
 };

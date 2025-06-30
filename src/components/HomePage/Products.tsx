@@ -10,8 +10,89 @@ export interface Product {
   price: number;
   image: string;
 }
+
+
 const Products = () => {
-  const allProducts: Product[] = [
+  return (
+    <MaxWidthWrapper className="py-16">
+      <SectionHeading
+      className="max-w-md mx-auto"
+        title="Our Fresh Products"
+        subTitle="Our  Products"
+        description=" We pride ourselves on offering a wide variety of fresh and flavorful fruits, vegetables, and salad ingredients."
+      />
+      <Tabs defaultValue="all" className="">
+        <TabsList className="bg-transparent w-max mx-auto py-10">
+          <TabsTrigger
+            className="border border-[#D9D9D9] data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
+            value="all"
+          >
+            All{" "}
+          </TabsTrigger>
+          <TabsTrigger
+            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
+            value="fruits"
+          >
+            Fruits
+          </TabsTrigger>
+          <TabsTrigger
+            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
+            value="vegetable"
+          >
+            Vegetable
+          </TabsTrigger>
+          <TabsTrigger
+            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
+            value="salad"
+          >
+            Salad
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="all">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+            {allProducts.map((item, idx) => (
+              <ProductCard key={idx} data={item} />
+            ))}
+          </div>
+        </TabsContent>
+        <TabsContent value="fruits">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {fruits.map((item, idx) => (
+              <ProductCard key={idx} data={item} />
+            ))}
+          </div>
+        </TabsContent>
+        <TabsContent value="vegetable">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {vegetables.map((item, idx) => (
+              <ProductCard key={idx} data={item} />
+            ))}
+          </div>
+        </TabsContent>
+        <TabsContent value="salad">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {allProducts.map((item, idx) => (
+              <ProductCard key={idx} data={item} />
+            ))}
+          </div>
+        </TabsContent>
+      </Tabs>
+
+      <div className="flex justify-center mt-10">
+        <Button
+          variant={"outline"}
+          className="text-[#FF6A1A] font-semibold border border-[#FF6A1A]  mx-auto hover:bg-[#FF6A1A]  hover:text-white hover:cursor-pointer"
+        >
+          See All Products
+        </Button>
+      </div>
+    </MaxWidthWrapper>
+  );
+};
+
+export default Products;
+
+const allProducts: Product[] = [
     {
       name: "Mushroom",
       price: 2.3,
@@ -60,7 +141,7 @@ const Products = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTitYipbBtEAkVKfz_jdXp3saKbLosEkWl9Tg&s",
     },
   ];
-  const fruits: Product[] = [
+  export const fruits: Product[] = [
     {
       name: "Orange",
       price: 2.3,
@@ -162,82 +243,3 @@ const Products = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTitYipbBtEAkVKfz_jdXp3saKbLosEkWl9Tg&s",
     },
   ];
-
-  return (
-    <MaxWidthWrapper className="py-16">
-      <SectionHeading
-      className="max-w-md mx-auto"
-        title="Our Fresh Products"
-        subTitle="Our  Products"
-        description=" We pride ourselves on offering a wide variety of fresh and flavorful fruits, vegetables, and salad ingredients."
-      />
-      <Tabs defaultValue="all" className="">
-        <TabsList className="bg-transparent w-max mx-auto py-10">
-          <TabsTrigger
-            className="border border-[#D9D9D9] data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
-            value="all"
-          >
-            All{" "}
-          </TabsTrigger>
-          <TabsTrigger
-            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
-            value="fruits"
-          >
-            Fruits
-          </TabsTrigger>
-          <TabsTrigger
-            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
-            value="vegetable"
-          >
-            Vegetable
-          </TabsTrigger>
-          <TabsTrigger
-            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
-            value="salad"
-          >
-            Salad
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="all">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
-            {allProducts.map((item, idx) => (
-              <ProductCard key={idx} data={item} />
-            ))}
-          </div>
-        </TabsContent>
-        <TabsContent value="fruits">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {fruits.map((item, idx) => (
-              <ProductCard key={idx} data={item} />
-            ))}
-          </div>
-        </TabsContent>
-        <TabsContent value="vegetable">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {vegetables.map((item, idx) => (
-              <ProductCard key={idx} data={item} />
-            ))}
-          </div>
-        </TabsContent>
-        <TabsContent value="salad">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {allProducts.map((item, idx) => (
-              <ProductCard key={idx} data={item} />
-            ))}
-          </div>
-        </TabsContent>
-      </Tabs>
-
-      <div className="flex justify-center mt-10">
-        <Button
-          variant={"outline"}
-          className="text-[#FF6A1A] font-semibold border border-[#FF6A1A]  mx-auto hover:bg-[#FF6A1A]  hover:text-white hover:cursor-pointer"
-        >
-          See All Products
-        </Button>
-      </div>
-    </MaxWidthWrapper>
-  );
-};
-
-export default Products;
