@@ -13,6 +13,7 @@ import NavItems from "./NavItems";
 import { AlignJustify, Heart, ShoppingCart } from "lucide-react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import Image from "next/image";
+import { SingInForm } from "../HomePage/SignInForm";
 
 const Navbar = () => {
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
           <NavItems />
         </div>
 
-        <div className="hidden lg:block  text-white ">
+        <div className="hidden lg:block   ">
           <div className="flex gap-4">
             <div className="flex gap-1 items-center">
               <Heart size={16} />
@@ -46,7 +47,7 @@ const Navbar = () => {
             </div>
 
             <div>
-              <Button variant="outline" className="bg-transparent">Sing in</Button>
+              <SingInForm />
             </div>
           </div>
         </div>
