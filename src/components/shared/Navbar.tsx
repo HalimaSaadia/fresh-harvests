@@ -12,21 +12,19 @@ import { Button } from "@/components/ui/button";
 import NavItems from "./NavItems";
 import { AlignJustify, Heart, ShoppingCart } from "lucide-react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <nav className={`w-full bg-white py-7`}>
       <MaxWidthWrapper className="flex items-center justify-between">
-        <div>
-          {/* <Link href="/">
+        <div className="flex justify-center gap-2">
           <Image
-            loader={customLoader}
-            src="logo.png"
-            width={80}
-            height={80}
-            alt=""
+            src={"/images/logo.png"}
+            alt="footer logo"
+            height={30}
+            width={30}
           />
-        </Link> */}
           <h1 className="text-[#212337] text-2xl font-semibold">
             Fresh Harvests
           </h1>

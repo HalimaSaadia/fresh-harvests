@@ -22,14 +22,15 @@ const NavItems = ({}) => {
             asChild
             variant="ghost"
             key={link.id}
-            className={`hover:bg-white font-normal ${cn(
+            className={`hover:bg-white font-normal flex-col  ${cn(
               pathname === link.url ? " " : ""
             )}`}
           >
             <p>
-              <Link href={link.url} className="text-base">
+              <Link href={link.url} className="text-base block">
                 {link.label}
               </Link>
+             {pathname === link.url && <span className="block h-1.5 w-4 bg-[#749B3F] rounded-xl text-transparent">&nbsp;</span>}
             </p>
           </Button>
         ))}
