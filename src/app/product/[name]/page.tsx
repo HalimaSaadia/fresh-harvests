@@ -1,7 +1,10 @@
 "use client";
 import QuantityCounter from "@/components/Product/QuantityCounter";
 import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
-import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@radix-ui/react-tabs";
+import { Heart, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,7 +12,6 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const page = () => {
-   
   return (
     <MaxWidthWrapper className="py-20">
       {/* Product Details Section */}
@@ -46,7 +48,7 @@ const page = () => {
         </div>
 
         <div>
-            {/* information Section */}
+          {/* information Section */}
           <div>
             <h3 className="text-[#749B3F] bg-gray-100 font-semibold inline-block px-2 rounded">
               Fruits
@@ -79,11 +81,79 @@ const page = () => {
               dishes, or even for a refreshing drink straight from the shell.
             </p>
           </div>
-             {/* Counter Section */}
+          {/* Counter Section */}
+          <QuantityCounter />
 
-             <QuantityCounter />
+          {/* cart section */}
+          <div className="flex gap-7 flex-wrap justify-center md:justify-start">
+            <Button className="bg-[#F4F6F6] hover:bg-[#F4F6F6] text-lg text-[#4A4A52] font-bold py-5">
+              <Heart
+                size={25}
+                className="inline-block"
+                color="#D9D9D9"
+                fill="#D9D9D9"
+              />{" "}
+              Save As Favorite
+            </Button>
+            <Button className="bg-[#FF6A1A] hover:bg-[#FF6A1A] text-lg text-[#ffffff] font-bold py-5">
+              <ShoppingCart
+                size={25}
+                className="inline-block"
+                color="#ffffff"
+                fill="#ffffff"
+              />{" "}
+              Save As Favorite
+            </Button>
+          </div>
         </div>
       </div>
+
+      {/* Description and reviews */}
+      <Tabs defaultValue="description" className="py-20">
+        <TabsList className="bg-transparent w-max mx-auto py-10">
+          <TabsTrigger
+            className="border border-[#D9D9D9] data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-lg rounded py-4 px-3 md:px-6  text-[#A6A6A6]"
+            value="description"
+          >
+            Description{" "}
+          </TabsTrigger>
+          <TabsTrigger
+            className="border border-[#D9D9D9] data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-lg rounded py-4 px-3 md:px-6 ml-3"
+            value="reviews"
+          >
+            Reviews
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="description">
+          <div className="bg-[#F4F6F6] max-w-4xl rounded-xl p-8">
+              <p className="text-[#4A4A52] sm:text-sm md:text-lg font-semibold">
+                {" "}
+                Our coconuts are sustainably grown, ensuring the best quality
+                and taste. Each coconut is handpicked and carefully prepared,
+                offering you the freshest product possible. Rich in healthy
+                fats, electrolytes, and essential nutrients, coconuts provide
+                both hydration and nourishment. Whether you&apos;re using the
+                water, flesh, or milk, our coconuts bring versatility to your
+                kitchen while supporting healthy living.
+              </p>
+              <p className="text-[#4A4A52] sm:text-sm md:text-lg mt-5 font-semibold">
+                {" "}
+                Perfect for smoothies, desserts, curries, and more — let the
+                natural sweetness of the coconut elevate your recipes. Enjoy the
+                tropical goodness in its purest form, directly from nature.
+              </p>
+            </div>
+        </TabsContent>
+        <TabsContent value="reviews">
+         <div className="bg-[#F4F6F6] max-w-4xl rounded-xl p-8">
+              <p className="text-[#4A4A52] sm:text-sm md:text-lg font-semibold">
+                {" "}
+                I absolutely love Fresh Harvest! The quality of their produce is outstanding. It's always fresh, flavorful, and delicious. The convenience of ordering online and having it delivered to my doorstep saves me so much time. Fresh Harvest has become my go-to for all my fruit and vegetable needs.
+              </p>
+            
+            </div>
+        </TabsContent>
+      </Tabs>
     </MaxWidthWrapper>
   );
 };

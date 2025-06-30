@@ -174,25 +174,25 @@ const Products = () => {
       <Tabs defaultValue="all" className="">
         <TabsList className="bg-transparent w-max mx-auto py-10">
           <TabsTrigger
-            className="data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 border"
+            className="border border-[#D9D9D9] data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
             value="all"
           >
             All{" "}
           </TabsTrigger>
           <TabsTrigger
-            className="data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 border"
+            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
             value="fruits"
           >
             Fruits
           </TabsTrigger>
           <TabsTrigger
-            className="data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
+            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
             value="vegetable"
           >
             Vegetable
           </TabsTrigger>
           <TabsTrigger
-            className="data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
+            className="border border-[#D9D9D9] ml-3 data-[state=active]:bg-[#749B3F] data-[state=active]:text-white text-sm md:text-base rounded py-4 px-3 md:px-6 "
             value="salad"
           >
             Salad
